@@ -7,4 +7,3 @@ func increase_score(amount):
 	score += amount
 	print(score)
 	score_text.text = str("Score: ", score)
-	
