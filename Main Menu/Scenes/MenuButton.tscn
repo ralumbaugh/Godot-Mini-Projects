@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://m8nts6d7haop"]
+
+[ext_resource type="Script" path="res://Main Menu/Scripts/MenuButton.gd" id="1_tkg82"]
+
+[node name="Menu Button" type="Button"]
+offset_right = 176.0
+offset_bottom = 31.0
+script = ExtResource("1_tkg82")
+
+[connection signal="button_down" from="." to="." method="_on_button_down"]
