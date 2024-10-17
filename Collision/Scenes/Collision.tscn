@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfp4lth4ppe5a"]
+[gd_scene load_steps=7 format=3 uid="uid://cfp4lth4ppe5a"]
 
 [ext_resource type="PackedScene" uid="uid://cfm4ccwvds878" path="res://Collision/Scenes/Player.tscn" id="1_ih1j2"]
+[ext_resource type="PackedScene" uid="uid://m8nts6d7haop" path="res://Main Menu/Scenes/MenuButton.tscn" id="1_j54dq"]
 [ext_resource type="PackedScene" uid="uid://dokwp8l5b5gi1" path="res://Collision/Scenes/Tree.tscn" id="2_sn3gx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ck70b"]
@@ -13,6 +14,13 @@ background_mode = 1
 background_color = Color(0.483338, 0.649368, 1, 1)
 
 [node name="Main" type="Node3D"]
+
+[node name="Menu Button" parent="." instance=ExtResource("1_j54dq")]
+offset_left = 470.0
+offset_top = 594.0
+offset_right = 646.0
+offset_bottom = 625.0
+text = "Main Menu"
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1.80469, 0, 0, 0, 2.32561, -2.20947, 0, 0.846452, 6.07046, 0, 0, 0)
@@ -32,6 +40,9 @@ shadow_enabled = true
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_a0rvn")
 
+[node name="Player" parent="." instance=ExtResource("1_ih1j2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12325, 35.1561, -86.606)
+
 [node name="Tree" parent="." instance=ExtResource("2_sn3gx")]
 transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, 3.10998, 0, 0)
 
@@ -40,9 +51,6 @@ transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, -4
 
 [node name="Tree3" parent="." instance=ExtResource("2_sn3gx")]
 transform = Transform3D(1, 0, 0, 0, 0.939693, -0.34202, 0, 0.34202, 0.939693, -3.07571, -3.08751, 9.26912)
-
-[node name="Player" parent="." instance=ExtResource("1_ih1j2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.12325, 35.1561, -86.606)
 
 [node name="Tree4" parent="." instance=ExtResource("2_sn3gx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67887, 14.0858, -37.5786)
